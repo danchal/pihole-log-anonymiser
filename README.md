@@ -1,18 +1,18 @@
-# Pihole Log Anonymiser
+# Pi-hole Log Anonymiser
 A systemd service to anonymise the logs of pihole in real time.
 
 ## Features
   * Anonymises all the client request domains and IP address
-  * Pi-Holed domains and IP addresses are left visible for statists
+  * Pi-holed domains and IP addresses are left visible
 
 ## References
-[Pi-Hole](https://pi-hole.net/)
+[Pi-hole](https://pi-hole.net/)
 
 [Dnsmasq-log-anonymiser](https://github.com/danchal/dnsmasq-log-anonymiser)
 
 ## Requirements
         Systemd
-        Pihole
+        Pi-hole
 
 ## Install
         $ git clone git@github.com:danchal/pihole-log-anonymiser.git
