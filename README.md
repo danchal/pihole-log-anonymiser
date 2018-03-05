@@ -15,7 +15,7 @@ A systemd service to anonymise the logs of pihole in real time.
         Pi-hole
 
 ## Install
-        $ git clone git@github.com:danchal/pihole-log-anonymiser.git
+        $ git clone https://github.com/danchal/pihole-log-anonymiser.git
         $ git submodue init
         $ git submodule update
         $ sudo ./setup.sh
