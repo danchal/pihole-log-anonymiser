@@ -20,7 +20,7 @@ sed -E 's:^(log-facility=).*:\1/var/log/pihole.log.pipe:' /etc/dnsmasq.d/01-piho
 
 # create systemd service
 cp ${SYSTEMD_UNIT}.service /etc/systemd/system/
-cp ${SYSTEMD_UNIT} /usr/local/sbin/
+cp ${SYSTEMD_UNIT}/${SYSTEMD_UNIT} /usr/local/sbin/
 
 systemctl daemon-reload
 systemctl enable ${SYSTEMD_UNIT}.service
