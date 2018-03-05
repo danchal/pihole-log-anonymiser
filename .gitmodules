@@ -1,3 +1,3 @@
 [submodule "dnsmasq-log-anonymiser"]
 	path = dnsmasq-log-anonymiser
-	url = git@github.com:danchal/dnsmasq-log-anonymiser.git
+	url = https://github.com/danchal/dnsmasq-log-anonymiser.git
