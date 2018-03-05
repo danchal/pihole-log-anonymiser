@@ -16,7 +16,7 @@ cp -n ${SYSTEMD_UNIT}.conf /etc/
 mkfifo /var/log/pihole.log.pipe
 
 # modify pihole dnsmasq configuration to send dnsmasq log to named pipe
-sed -E 's:^(log-facility=).*:\1/var/log/pihole.log.pipe:' /etc/dnsmasq.d/01-pihole.conf
+sed -i -E 's:^(log-facility=).*:\1/var/log/pihole.log.pipe:' /etc/dnsmasq.d/01-pihole.conf
 
 # create systemd service
 cp ${SYSTEMD_UNIT}.service /etc/systemd/system/
