@@ -1,0 +1,15 @@
+[Unit]
+Description=dnsmasq-log-anonymiser
+Before=dnsmasq.service
+
+[Service]
+User=dnsmasq
+Group=syslog
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+Restart=no
+ExecStart=/usr/local/sbin/dnsmasq-log-anonymiser --config '/etc/dnsmasq-log-anonymiser.conf'
+
+[Install]
+WantedBy=dnsmasq.service
