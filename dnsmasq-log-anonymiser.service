@@ -8,7 +8,8 @@ Group=syslog
 Type=simple
 StandardOutput=syslog
 StandardError=syslog
-Restart=no
+RestartSec=1
+Restart=on-failure
 ExecStart=/usr/local/sbin/dnsmasq-log-anonymiser --config '/etc/dnsmasq-log-anonymiser.conf'
 
 [Install]

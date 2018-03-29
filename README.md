@@ -23,10 +23,11 @@ A systemd service to anonymise the logs of pihole in real time.
 ## Setup
 1. Edit the configuration file, /etc/dnsmasq-log-anonymiser.conf
 
-2. Restart Pi-hole
+2. Start the dnsmasq-log-anonymiser Systemd service
+
+        $ sudo systemctl restart dnsmasq-log-anonymiser.service
+
+3. Restart Pi-hole
 
         $ pihole restartdns
 
-3. Start the dnsmasq-log-anonymiser Systemd service
-
-        $ sudo systemctl restart dnsmasq-log-anonymiser.service
