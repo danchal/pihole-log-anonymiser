@@ -10,6 +10,11 @@ cd "$( dirname "${BASH_SOURCE[0]}" )"
 SYSTEMD_UNIT="dnsmasq-log-anonymiser"
 DNSMASQ_LOG="/var/log/dnsmasq.log"
 
+# create log file if not exist
+if [[ ! -f ${DNSMAS_LOG} ]]; then
+    touch ${DNSMASQ_LOG}
+fi
+
 # do not clobber an existing config file
 cp -n ${SYSTEMD_UNIT}.conf /etc/
 
