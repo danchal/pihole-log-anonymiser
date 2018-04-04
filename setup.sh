@@ -16,6 +16,9 @@ if [[ ! -p ${DNSMASQ_PIPE} ]]; then
     mkfifo ${DNSMASQ_PIPE}
 fi
 
+# set ownership of log file
+chown dnsmasq:root "${DNSMASQ_PIPE}"
+
 # do not clobber an existing config file
 cp -n ${SYSTEMD_UNIT}.conf /etc/
 
