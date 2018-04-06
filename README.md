@@ -20,20 +20,10 @@ For the privacy conscious, this provides an alternative to disabling the logging
         Pi-hole
 
 ## Install
+!! Warning - this will wipe the existing Pi-hole log and FTL database !!
+
         $ git clone https://github.com/danchal/pihole-log-anonymiser.git
         $ cd pihole-log-anonymiser
         $ git submodue init
         $ git submodule update
         $ sudo ./setup.sh
-
-## Setup
-1. Edit the configuration file, /etc/dnsmasq-log-anonymiser.conf
-
-2. Start the dnsmasq-log-anonymiser Systemd service
-
-        $ sudo systemctl restart dnsmasq-log-anonymiser.service
-
-3. Restart Pi-hole
-
-        $ pihole restartdns
-

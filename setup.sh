@@ -29,5 +29,19 @@ sed -i -E "s:^(log-facility=).*:\1${DNSMASQ_PIPE}:" /etc/dnsmasq.d/01-pihole.con
 cp ${SYSTEMD_UNIT}.service /etc/systemd/system/
 cp ${SYSTEMD_UNIT}/${SYSTEMD_UNIT} /usr/local/sbin/
 
+# enable new service
 systemctl daemon-reload
 systemctl enable ${SYSTEMD_UNIT}.service
+
+# start new service
+systemctl restart ${SYSTEMD_UNIT}.service
+
+# restart pihole
+pihole restartdns
+
+# wipe pihole log
+pihole flush
+
+# wipe pihole FTL database & restart
+rm /etc/pihole/pihole-FTL.db
+systemctl restart pihole-FTL.service
