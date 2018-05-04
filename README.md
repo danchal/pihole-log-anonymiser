@@ -5,6 +5,12 @@ A systemd service to anonymise the logs of pihole in real time.
   * Anonymises all the allowed client request domains and IP address
   * Blocked Pi-holed domains and IP addresses are left visible
 
+### Before
+![Before](assets/pihole-domains-before.png)
+
+### After
+![After](assets/pihole-domains-after.png)
+
 ## Why
 Pi-hole allows you to monitor the performance and statistics on your network. However, in order to do this you must enable logging which exposes not only the blocked domains but also the allowed domains.
 
