@@ -4,6 +4,7 @@ A systemd service to anonymise the logs of pihole in real time.
 ## Features
   * Anonymises all the allowed client request domains and IP address
   * Blocked Pi-holed domains and IP addresses are left visible
+
 ### Before
 ![Before](assets/pihole-domains-before.png)
 
