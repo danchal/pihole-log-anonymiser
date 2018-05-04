@@ -4,7 +4,6 @@ Before=dnsmasq.service
 
 [Service]
 User=dnsmasq
-Group=syslog
 Type=simple
 StandardOutput=syslog
 StandardError=syslog
