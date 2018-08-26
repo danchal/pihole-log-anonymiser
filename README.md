@@ -1,3 +1,6 @@
+
+# **DEPRECATED - This project has been marked as deprecated by the release of Pi-Hole v4, with the introduction of *Privacy Levels*.**
+
 # Pi-hole Log Anonymiser
 A systemd service to anonymise the logs of pihole in real time.
 
